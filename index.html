@@ -1,0 +1,138 @@
+<html>
+  <head>
+    <title>Restosearch</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link href="style.css" rel="stylesheet" type="text/css">
+  </head>
+  
+   <body>
+      <!-- Menu down below -->
+    <div class="circle"></div>
+    <button class="btn">
+      <span class="btn__line"></span>
+      <span class="btn__line"></span>
+      <span class="btn__line"></span>
+    </button>
+    <div class="full-menu">
+      <div class="layer"></div>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="#" class="nav__link">
+              Home
+            </a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">
+              About
+            </a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">
+              Portfolio
+            </a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">
+              Contacts
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <!-- Menu up above -->
+    
+    <!-- Input, maps and cards down below -->
+    <main>
+        <div class="container">
+            <div class="box">
+                <div>
+                    <h2 style="font-size: 5em">Restosearch</h2>
+                </div>
+            </div> 
+        </div>
+        <div class="downBox">
+                    <input id="pac-input" class="controls" type="text" placeholder="What are you looking for?">
+        </div>
+        <div id="buttonContainer">
+        </div>
+        <div class="divider"></div>
+        
+        <!-- 2 columns map and cards down below, this section will appear only when you type in the searchbar -->
+
+            <div class="columnsContainer">
+          <div class="leftColumn">
+            <div class="filterResearch">
+              <select name="filter" id="searchFilter">
+                <option value="all">Apply a filter</option>
+                <option value="1">1 Star</option>
+                <option value="2">2 Stars</option>
+                <option value="3">3 Stars</option>
+                <option value="4">4 Stars</option>
+                <option value="5">5 Stars</option>
+              </select>
+            </div>
+            <div id="map"></div>
+            <div class="rightColumn" style="margin-top:50px;">
+              <div class="card-grid">
+                
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="divider"></div>
+        
+        <!-- this section will appear only when you click on a card -->
+            
+        <div class="columnsContainerTwo">
+	  	    <div class="leftColumnTwo">
+	  	    <img src="https://image.ibb.co/k4SSPK/Spinaci_Green_Dark_Blue.jpg" class="detailPhoto" style="margin-bottom: -50px;">
+               <div class="detailInfo">
+                   <div class="leftInfoParagraph">
+                        <p style="padding-bottom: 40px;" id="addressRestaurant">Address here Address here Address here Address here Address here </p>
+                    </div>
+                   
+	  	            <p class="leftInfoParagraph" style="padding-bottom: 30px;" id="ratingPlace">Rating here</p>
+                   
+                    <button class="button button1">Add your review</button>
+                   
+                </div>  		
+                <div class="rightColumnTwo">
+                    <div class="division"></div>
+                    <h2 class="titleRestaurant">Titolo del ristorante qua</h2>
+                    <hr>
+                    <div class="division"></div>
+                    <div class="containerForm">
+                          <div id="contact" >
+                            <div class="left">
+                                <input type="text" name="authName" placeholder="Name" id="authName">
+                            </div>
+                            <div class="right">
+                              <textarea placeholder="Your review here" name="reviewHere" id="reviewHere" required="required"></textarea>
+                            </div>
+                            <div class="send-button cl">
+                              <button type="submit" id="sendButton">Send</button>
+                            </div>
+                        </div>
+                    </div>
+                    <section class="cardDetail">
+                     
+                    </section>
+                    <div id="mapA"></div>
+                    <div id="pano"></div>
+                </div>
+            </div>
+        </div>
+        <!-- Input, maps and cards up above -->
+    </main>  
+  </body>
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+  <script src="script.js"> </script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWb4mliJPGjwsAhNvdDEveAd0dTe9KXxE
+&libraries=places&callback=initAutocomplete" async defer></script>
+</html>
